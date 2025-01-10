@@ -620,9 +620,10 @@ windows-exporter:
     k8s.grafana.com/logs.job: integrations/windows_exporter
 
   # @ignored
-  service:
-    annotations:
-      prometheus.io/scrape: "false"
+# Not able to do this until https://github.com/prometheus-community/helm-charts/issues/5129 is fixed.
+#  service:
+#    annotations:
+#      prometheus.io/scrape: "false"
 
 
 # Kepler gathers energy metrics for the Kubernetes Cluster and the objects running inside.
